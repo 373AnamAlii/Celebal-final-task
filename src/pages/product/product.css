@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #FF9494;
+    --secondary-color: #FFD1D1;
+    --tertiary-color: #FFE3E1;
+    --quaternary-color: #FFF5E4;
+}
+
+.product .grid {
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.product-image {
+    width: auto;
+    height: auto;
+}
+
+.details {
+    background-color: var(--quaternary-color);
+    box-shadow: rgb(228, 228, 230) 0px 10px 10px -5px;
+    border-radius: 10px;
+}
+
+.description {
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+.related .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    justify-self: center;
+}
+
+.card .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    grid-template-rows: 200px 50px 30px;
+    text-overflow: ellipsis;
+}
+
+.description::first-letter {
+    text-transform: capitalize;
+}
+
+@media (max-width: 700px) {
+    .related .grid {
+        grid-template-columns: repeat(2, 1fr);
+        background-color: transparent;
+    }
+
+    .card .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 660px) {
+    .product .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .related .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
